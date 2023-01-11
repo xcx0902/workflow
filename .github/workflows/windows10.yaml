@@ -1,0 +1,15 @@
+name: windows10 (self-hosted runner test)
+
+on:
+  workflow_dispatch
+
+jobs:
+  build:
+    runs-on: windows10
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World!"
+      - name: Print Open IP Address
+        run: curl http://ipinfo.io
+      - name: Output File
+        run: echo "Hello World!" > helloworld.txt
