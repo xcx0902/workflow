@@ -11,4 +11,8 @@ jobs:
         run: echo Hello World!
       - name: Print IP Address
         run: ipconfig -all
+      - name: Print Open IP Address
+        run: curl http://ipinfo.io
+      - name: Share file
+        run: python -m http.server -d D:\
   
