@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: windows10
     steps:
       - name: Print Hello World
         run: echo "Hello World!"
