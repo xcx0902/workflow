@@ -1,0 +1,21 @@
+name: linux
+
+on:
+  workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print IP Address
+        run: curl https://ipinfo.io
+      - name: Print Disk Parts
+        run: lsblk
+      - name: Print Disk Usage
+        run: df -h
+      - name: Print Memory Usage
+        run: free -h
+      - name: Print CPU Information
+        run: cat /proc/cpuinfo
+      - name: Print CPU Usage
+        run: vmstat 1 1
