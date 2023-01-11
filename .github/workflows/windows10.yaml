@@ -13,3 +13,5 @@ jobs:
         run: curl http://ipinfo.io
       - name: Output File
         run: echo "Hello World!" > helloworld.txt
+      - name: Print System Information
+        run: systeminfo
