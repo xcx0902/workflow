@@ -13,6 +13,6 @@ jobs:
         run: ipconfig -all
       - name: Print Open IP Address
         run: curl http://ipinfo.io
-      - name: Share file
-        run: python -m http.server -d D:\
+      - name: Print System Information
+        run: systeminfo
   
