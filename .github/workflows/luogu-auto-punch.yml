@@ -7,13 +7,13 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Download script
-        run: wget https://raw.githubusercontent.com/xcx0902/python/main/luogu-auto-punch.py
+        run: curl https://raw.githubusercontent.com/xcx0902/python/main/luogu-auto-punch.py -O script.py
       - name: Install dependencies
         run: pip install requests
       - name: Run script
-        run: python ./luogu-auto-punch.py $Env:COOKIE
+        run: python ./script.py $Env:COOKIE
         env:
           COOKIE: ${{ secrets.COOKIE }}
